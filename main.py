@@ -1,5 +1,6 @@
 # Importing and initializing pygame
 import pygame as pg
+import asyncio
 
 pg.init()
 
@@ -268,7 +269,7 @@ def reset_defaults():
     giggle_clone = pg.Rect(clone_x, clone_y, 155, 170)
 
 # Game loop
-def game_loop():
+async def game_loop():
     running = True
     while running:
         global current_level, position_x, position_y, clone_x, clone_y, giggle, giggle_clone
@@ -304,7 +305,7 @@ def game_loop():
     
         # Updates the display
         display.update()
-game_loop()
+asyncio.run( game_loop() )
 
 # Quit the game when the main loop is done
 pg.quit()
