@@ -1,3 +1,3 @@
 # Bookish Giggle
 
-Made for Hack Club Counterspell
+Made for Counterspell
